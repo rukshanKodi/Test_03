@@ -63,6 +63,13 @@
 
     </div>
 
+    <script th:inline="javascript">
+        var message = /*[[${message}]]*/ "";
+        if (message && message !== "") {
+            alert(message);
+        }
+    </script>
+
 </body>
 
 </html>

@@ -36,8 +36,9 @@ public class Household {
         this.user = user;
     }
 
-    
-
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

@@ -55,6 +55,8 @@ public class Populator implements CommandLineRunner {
     // Creating Family Member Details
     HouseholdMember HHmember_1 = new HouseholdMember("John Peter", family_1, 200);
     householdMemberService.save(HHmember_1);
+    HouseholdMember HHmember_12 = new HouseholdMember("John Peter 2", family_1, 200);
+    householdMemberService.save(HHmember_12);
     HouseholdMember HHmember_2 = new HouseholdMember("Natalia laz", family_2, 20);
     householdMemberService.save(HHmember_2);
     HouseholdMember HHmember_3 = new HouseholdMember("Jane Peterson", family_2, 1);
