@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"
+        th:href="@{/static/style.css}">
+    <script type="text/javascript" th:src="@{/static/script.js}"></script>
+    <title>HouseTask</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#completed task">Completed Task</a>
+            <a href="#reward">My Reward</a>
+            <a href="#profile">Profile</a> <!--May not need profile link/page-->
+        </nav>
+
+        <!--Maybe add a sign out link in nav-->
+
+        <h1> HomeTasks</h1>
+
+    </header>
+
+    <!-- Create household for user account -->
+    <section id="createHouseholdSection">
+    <form action="#" th:action="@{/create-household}" method="POST" th:object="${user}" class="addHousehold">
+        <input type="text" name="name" placeholder="Enter household name" />
+        <button type="submit"> Submit </button>
+    </form>
+    </section>
+
+<!-- Sign in to current household -->
+    <section id="currentHouseholdSection">
+        <h2>Choose your current household <a th:href="@{/dashboard}"> here </a>
+        </h2>
+    </section>
+
+    <!-- RK -->
+<!-- @Esperaji move this button in to correct place -->
+</form>
+<form action="#" th:action="@{/add_task}" method="GET" th:object="${user}" class="addHousehold">
+    <button type="submit">Create Task</button>
+</form>
+
+    <!--Bottom nav bar-->
+    <div id="bottom navbar">
+        <a href="#reward"><img src="" alt="#"></a>
+        <a href="#search"><img src="" alt="#"></a>
+    </div>
+
+
+    <footer>
+        &copy; 2023 HomeTasks
+    </footer>
+
+    <script>
+        //check if user has a household
+        var userHasHousehold = (user.household !== null && user.household !== undefined);
+        // section references
+        var currentHouseholdSection = document.getElementById('currentHouseholdSection');
+        var createHouseholdSection = document.getElementById('createHouseholdSection');
+
+        //Toggle section visibility
+        if (userHasHousehold) {
+            currentHouseholdSection.style.display = 'block';
+            createHouseholdSection.style.display = 'none';
+        } else {
+            currentHouseholdSection.style.display = 'none';
+            createHouseholdSection.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Reward Input</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class='reward-header-top'>
+        <button class='drop-button' onclick="menuClick()">
+            <h3>FAMILY TASK REWARD</h3>
+        </button>
+    </div>
+    <div class="reward-header-bottom">
+        <div id="dropdown" class="drop-menu">
+            <nav>
+                <ul class="Reward-Input"></ul>
+                    <li class="tab-links active-link" onclick="opentab('reward')"><a href="#rewards">Reward List</a></li>
+                    <li class="tab-links" onclick="opentab('price')"><a 
+                    href="#prices" style="color: darkgreen;">Reward Price</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div>
+        <div>
+            <h1 class="sub-title">Family Task Reward Mission Statement/instruction</h1>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos provident ad quisquam neque exercitationem id eveniet illo ipsum impedit optio? Ut, autem beatae? Optio ullam molestias ad necessitatibus illum officiis aliquam dolore. Fuga odio blanditiis est iure sapiente modi ipsa voluptatibus libero quidem eius, illum architecto! Dolor sunt asperiores optio quam impedit, aut excepturi fugiat. Suscipit, omnis 
+                    maiores? Voluptatum ut minus harum aliquid voluptates, fuga facilis magnam consectetur illum laborum.</p>
+            </div>
+        </div>
+            <div class="reward-list-contents active-tab" id="list">
+                <table style="width:100%">
+                    <tr>
+                        <td>TASK LIST</td>
+                        <td>REWARD LIST</td>
+                        <td>REWARD PRICE</td>
+                        <td>Task Completed <br> (color coded)</td>
+                      </tr>
+                      <tr>
+                        <td> Task 1</td>
+                        <td> Reward 1</td>
+                        <td> Price 1</td>
+                        <td> Red / Green</td>
+                      </tr>
+                      <tr>
+                        <td>Task 2</td>
+                        <td>Reward 2</td>
+                        <td>Price 2</td>
+                        <td>Red</td>
+                      </tr>
+                       <tr>
+                        <td>Task 3</td>
+                        <td>Reward 3</td>
+                        <td>Price 3</td>
+                        <td>Green </td>
+                       </tr>
+                </table>
+            </div>
+            <div class="reward-list-contents" id="price">
+                <h2>REWARD PRICE </h2>
+                <p>Reward Price: <span style="color: darkgreen;">US Dollar Amount</span> <br>For any additional identical Task Completed, <span style="color: darkgreen;">Price will increase by 5%</span></p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Link the separate JavaScript file
+        <script src="reward.js"></script> -->
+</body>
+</html>

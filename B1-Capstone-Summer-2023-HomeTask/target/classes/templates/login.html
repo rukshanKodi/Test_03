@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"
+        th:href="@{/static/style.css}">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <script type="text/javascript" th:src="@{/static/script.js}"></script>
+
+
+    <title>HouseTask</title>
+</head>
+
+<body>
+    <br><br>
+        <h2>Home And Family Task Team</h2>
+        <div class="container" id="container">
+            <div class="form-container sign-in-container">
+                <form th:action="@{/loginUser}" th:object="${user}" method="post">
+                    <h1>Sign in</h1>
+                    <!-- <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div> -->
+                    <!-- <span>or use your account</span> -->
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <!-- <a href="#">Forgot your password?</a> -->
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back!</h1>
+                        <p>To keep connected with us please login with your personal info</p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hello</h1>
+                        <p>Enter your Name & Household Name and start your family Home Tasks</p>
+                        <a th:href="@{/register}"><button class="ghost" id="signUp">Create New</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

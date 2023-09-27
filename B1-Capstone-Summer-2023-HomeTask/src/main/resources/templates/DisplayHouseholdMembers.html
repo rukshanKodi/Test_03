@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" th:href="@{/static/style.css}">
+    <script type="text/javascript" th:src="@{/static/script.js}"></script>
+    <title> Family Members </title>
+</head>
+<body>
+    <!-- <li th:each="member:${household.members}">
+        <a th:href="@{'/members/' + ${member.name}}" th:text="${member.name}"> name</a>
+
+        </li> -->
+
+        <ul>
+            <li>
+                <h2>Brother</h2>
+                <h2>Total Rewards $5</h2>
+            </li>
+            <ul>
+                <li>
+                    <h3>Task assigned completed</h3>
+                </li>
+                <li>
+                    <h3>Task assigned completed</h3>
+                </li>
+            </ul>
+            <li>
+                <h2>Sister</h2>
+                <h2>Total Rewards $10</h2>
+            </li>
+            <ul>
+                <li>
+                    <h3>Task completed</h3>
+                </li>
+                <li>
+                    <h3>Task Completed</h3>
+                </li>
+            </ul>
+            <li>
+                <h2>Cousin</h2>
+                <h2>Total Rewards $30</h2>
+            </li>
+            <ul>
+                <li>
+                    <h3>Task completed</h3>
+                </li>
+                <li>
+                    <h3>Task Completed</h3>
+                </li>
+            </ul>
+            <li>
+                <h2>Father</h2>
+                <h2>Total Rewards $2</h2>
+            </li>
+            <ul>
+                <li>
+                    <h3>Task completed</h3>
+                </li>
+                <li>
+                    <h3>Task Completed</h3>
+                </li>
+            </ul>
+        </ul>
+</body>
+</html>
